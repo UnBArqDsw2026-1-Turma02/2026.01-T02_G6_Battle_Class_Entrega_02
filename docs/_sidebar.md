@@ -10,3 +10,4 @@
     - [<i class="fa-solid fa-sitemap"></i> 2.3. UML Organizacional / Casos de Uso](/Modelagem/2.3.ModelagemOrganizacionalCasosDeUso.md)
     - [<i class="fa-solid fa-users"></i> 2.4. Participações](/Modelagem/2.4.ParticipacoesModelagem.md)
     - [<i class="fa-solid fa-star"></i> 2.5. Iniciativas Extras](/Modelagem/2.5.IniciativasExtras.md)
+    - [<i class="fa-solid fa-circle-question"></i> 2.6. Perguntas de Modelagem](/Modelagem/2.6.PerguntasModelagem.md)
