@@ -26,6 +26,7 @@ Use o menu lateral para navegar entre as seções. A barra de busca no topo da s
 | [UML Organizacional](Modelagem/2.3.ModelagemOrganizacionalCasosDeUso.md) | Casos de uso                               |
 | [Participações](Modelagem/2.4.ParticipacoesModelagem.md)                 | Contribuição da equipe                     |
 | [Iniciativas Extras](Modelagem/2.5.IniciativasExtras.md)                 | Trabalhos adicionais                       |
+| [Perguntas de Modelagem](Modelagem/2.6.PerguntasModelagem.md)            | Alinhamento individual da equipe           |
 
 ---
 
