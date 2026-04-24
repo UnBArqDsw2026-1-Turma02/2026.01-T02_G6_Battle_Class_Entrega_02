@@ -98,6 +98,14 @@ Use o menu lateral para navegar entre as seções. A barra de busca no topo da s
     </div>
   </div>
   <div class="bc-team-card">
+    <img src="https://github.com/knz13.png" alt="Integrante">
+    <div>
+      <div class="bc-team-name">Otávio Oliveira de Maya Viana</div>
+      <div class="bc-team-role">211029503</div>
+      <a href="https://github.com/knz13" style="font-size:12px; margin-top:-10px; color:#2B6BE6">@knz13</a>
+    </div>
+  </div>
+  <div class="bc-team-card">
     <img src="https://github.com/audittmega.png" alt="Integrante">
     <div>
       <div class="bc-team-name">Thiago Tonin</div>
