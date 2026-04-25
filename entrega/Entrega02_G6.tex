@@ -1,0 +1,191 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+
+\geometry{a4paper,margin=2.2cm}
+
+\definecolor{bcBlue}{HTML}{2B6BE6}
+\definecolor{bcBlueDark}{HTML}{1A3FA0}
+\definecolor{bcGold}{HTML}{B8860B}
+\definecolor{bcGray}{HTML}{555555}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=bcBlue,
+  linkcolor=bcBlueDark,
+  citecolor=bcBlueDark
+}
+
+\titleformat{\section}
+  {\color{bcBlueDark}\Large\bfseries}
+  {\thesection}{0.6em}{}
+\titleformat{\subsection}
+  {\color{bcBlue}\large\bfseries}
+  {\thesubsection}{0.6em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{bcGray}\small Battle Class --- G6}
+\fancyhead[R]{\color{bcGray}\small Entrega 02 --- Desenho de Software}
+\fancyfoot[C]{\color{bcGray}\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+{\color{bcBlueDark}\Huge\bfseries Battle Class\par}
+\vspace{0.5cm}
+{\color{bcBlue}\Large Vestibular RPG com mecânica de Tower Defense\par}
+\vspace{2cm}
+{\large\bfseries Entrega 02 --- Módulo de Desenho de Software\par}
+\vspace{0.3cm}
+{\large Modelagem UML (Estática, Dinâmica e Organizacional / Casos de Uso)\par}
+\vspace{2.5cm}
+
+\begin{tabular}{rl}
+  \textbf{Disciplina:} & FGA0208 --- Arquitetura e Desenho de Software \\
+  \textbf{Turma:}      & T02 --- 2026.1 \\
+  \textbf{Grupo:}      & G6 \\
+  \textbf{Instituição:} & Universidade de Brasília --- Faculdade do Gama (UnB/FGA) \\
+  \textbf{Data:}       & Abril de 2026 \\
+\end{tabular}
+
+\vspace{3cm}
+
+{\color{bcGray}\small Documento de identificação da entrega, equipe e participações.\par}
+
+\vfill
+\end{titlepage}
+
+\section{Identificação do Projeto}
+
+\begin{description}[style=multiline,leftmargin=3.5cm]
+  \item[Projeto] Battle Class
+  \item[Descrição] Plataforma web \emph{mobile first} onde o estudante responde perguntas de múltipla escolha (provas, vestibulares, concursos) para acumular moedas de estudo e, com elas, enfrenta ondas de inimigos em partidas de \emph{tower defense}. O loop de jogo é \emph{Estudar $\to$ Ganhar moedas $\to$ Jogar TD $\to$ Repetir}.
+  \item[Stack] Front-end React (Mobile First) · Back-end Express + TypeScript · Banco PostgreSQL via Supabase · Deploy em Kubernetes.
+  \item[Grupo] G6 --- Turma T02 --- 2026.1
+\end{description}
+
+\section{Links do Repositório e da Documentação}
+
+\begin{itemize}[leftmargin=1.4em]
+  \item \textbf{Repositório GitHub (Entrega 02):} \\ \url{https://github.com/UnBArqDsw2026-1-Turma02/2026.01-T02_G6_Battle_Class_Entrega_02}
+  \item \textbf{Wiki navegável (GitPages):} \\ \url{https://unbarqdsw2026-1-turma02.github.io/2026.01-T02_G6_Battle_Class_Entrega_2/}
+  \item \textbf{Repositório da Entrega 01 (Design Sprint, BPMN, artefato generalista):} \\ \url{https://github.com/UnBArqDsw2026-1-Turma02/2026.01-T02_G6_Battle_Class_Entrega_01}
+\end{itemize}
+
+\section{Equipe}
+
+\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|p{6.3cm}|p{2.2cm}|p{5.5cm}|}
+\hline
+\rowcolor{bcBlue!15}
+\textbf{Nome completo} & \textbf{Matrícula} & \textbf{GitHub} \\
+\hline
+\endhead
+Ana Elisa Marques Martins Ramos        & 231011060 & \href{https://github.com/anaelisaramos}{@anaelisaramos} \\ \hline
+Dannyeclisson Rodrigo Martins da Costa & 211061592 & \href{https://github.com/Dannyeclisson}{@Dannyeclisson} \\ \hline
+Eric Akio Lages Nishimura              & 190105895 & \href{https://github.com/eric-kingu}{@eric-kingu} \\ \hline
+Gabriela Tiago de Araújo               & 190028475 & \href{https://github.com/GabrielaTiago}{@GabrielaTiago} \\ \hline
+João Carlos Lobo Sousa Monteiro        & 231012245 & \href{https://github.com/joaolobo10}{@joaolobo10} \\ \hline
+João Victor Pires Sapiência Santos     & 231026400 & \href{https://github.com/JoaoSapiencia}{@JoaoSapiencia} \\ \hline
+Lucas Oliveira Dias Marques Ferreira   & 211062787 & \href{https://github.com/LucasOliveiraDiasMarquesFerreira}{@LucasOliveiraDiasMarquesFerreira} \\ \hline
+Marina Agostini Galdi                  & 231035722 & \href{https://github.com/MarinaGaldi}{@MarinaGaldi} \\ \hline
+Otávio Oliveira de Maya Viana          & 211029503 & \href{https://github.com/knz13}{@knz13} \\ \hline
+Thiago Melo Tonin                      & 221022453 & \href{https://github.com/audittmega}{@audittmega} \\ \hline
+\end{longtable}
+
+\section{Artefatos Produzidos na Entrega 02}
+
+\textbf{Modelagem Estática (Foco 1)} --- Diagrama de Classes, Diagrama de Componentes, Diagrama de Implantação. \\
+\textbf{Modelagem Dinâmica (Foco 2)} --- Diagrama de Sequência (3 cenários, V1/V2), Diagrama de Atividades, Diagrama de Comunicação (V1/V2), Diagrama de Máquina de Estados da Partida (V1/V2). \\
+\textbf{Modelagem Organizacional / Casos de Uso (Foco 3)} --- Diagrama de Casos de Uso, Diagrama de Pacotes (Frontend + Backend em camadas).
+
+Todos os artefatos estão publicados na wiki navegável (GitPages), com recortes ampliados para leitura e comprobatórios individuais de revisão por pares.
+
+\section{Participações por Membro (Breve Relato)}
+
+A tabela a seguir resume a contribuição de cada membro na entrega. O detalhamento completo (com links para cada comprobatório de revisão e para os commits correspondentes) está em \textbf{\href{https://unbarqdsw2026-1-turma02.github.io/2026.01-T02_G6_Battle_Class_Entrega_2/\#/Modelagem/2.4.ParticipacoesModelagem}{§2.4 Participações}} na wiki.
+
+\textbf{Classificação adotada:} \emph{Excelente $\cdot$ Boa $\cdot$ Regular $\cdot$ Ruim $\cdot$ Nula}.
+
+\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|p{3.8cm}|p{9.3cm}|p{1.8cm}|}
+\hline
+\rowcolor{bcBlue!15}
+\textbf{Membro} & \textbf{Contribuição principal} & \textbf{Signif.} \\
+\hline
+\endhead
+\textbf{Ana Elisa Ramos} &
+Revisão detalhada de \textbf{todos os sete diagramas} da entrega (Classes, Componentes, Implantação, Sequência, Atividades, Comunicação, Casos de Uso), com comentários pontuais de consistência UML e propostas de correção de notação.
+& Excelente \\ \hline
+\textbf{Dannyeclisson Costa} &
+Autoria do \textbf{Diagrama de Componentes}; revisão dos quatro diagramas dinâmicos (Sequência, Atividades, Comunicação, Máquina de Estados) + Casos de Uso + Implantação; histórico de participação no Miro.
+& Excelente \\ \hline
+\textbf{Eric Akio Nishimura} &
+\textbf{Autor} das duas versões (V1/V2) do Diagrama de Comunicação; revisão do Diagrama de Atividades com sugestão de dividir o fluxo em camadas (front, back, serviços).
+& Excelente \\ \hline
+\textbf{Gabriela Tiago de Araújo} &
+Autoria do \textbf{Diagrama de Pacotes} (Frontend + Backend em camadas); revisão do Diagrama de Classes (sugerindo \texttt{Roleta} como serviço de domínio) e do Diagrama de Sequência (padronização de nomes de mensagens).
+& Excelente \\ \hline
+\textbf{João Carlos Lobo} &
+Autoria do \textbf{Diagrama de Casos de Uso}; revisão dos Diagramas de Sequência (dois comentários) e Atividades; debates de arquitetura e definição dos 8 componentes de back-end.
+& Excelente \\ \hline
+\textbf{João Victor Sapiência} &
+Revisão de seis diagramas (Componentes, Implantação, Atividades, Comunicação, Máquina de Estados, Casos de Uso) com destaque para relações \texttt{<<include>>}/\texttt{<<extend>>} e uso correto de losangos de decisão.
+& Excelente \\ \hline
+\textbf{Lucas Oliveira D. M. Ferreira} &
+\textbf{Autor} do Diagrama de Classes completo (com quatro quadrantes recortados para leitura); revisão de Sequência, Atividades, Máquina de Estados, Casos de Uso e Implantação --- incorporou feedback da Ana sobre multiplicidades de herança.
+& Excelente \\ \hline
+\textbf{Marina Agostini Galdi} &
+Autoria do \textbf{Diagrama de Implantação}; revisão dos quatro diagramas dinâmicos + Componentes + Casos de Uso; sugeriu a separação explícita entre estados \texttt{Vitoria} e \texttt{Derrota} na Máquina de Estados.
+& Excelente \\ \hline
+\textbf{Otávio Maya} &
+Autoria da \textbf{consolidação completa da wiki} (páginas 2.1--2.6), incluindo Senso Crítico, Rastreabilidade, Histórico de Versões e as 15 Perguntas de Modelagem (respondidas por todos os 10 membros); edições no Diagrama de Implantação; revisão dos Diagramas de Componentes e Casos de Uso.
+& Excelente \\ \hline
+\textbf{Thiago Tonin} &
+Autoria do \textbf{Diagrama de Atividades} e da \textbf{Máquina de Estados} (V1/V2); revisão dos Diagramas de Componentes, Comunicação, Implantação, Sequência e Casos de Uso; histórico de participação no Miro.
+& Excelente \\ \hline
+\end{longtable}
+
+\vspace{0.4cm}
+
+\textbf{Observação sobre comprobatórios.}
+Cada revisão listada acima tem um print (screenshot do comentário anotado diretamente sobre o diagrama) arquivado em \texttt{docs/assets/comprovatorios/<Membro>/} no repositório, e é referenciada por link em \textbf{§2.4 Participações} da wiki. A autoria de cada diagrama é evidenciada pelo histórico de commits, acessível tanto no GitHub quanto pelos históricos do Miro / draw.io registrados nas pastas dos autores.
+
+\section{Pontos de Vista e Colaboração}
+
+Durante a entrega, os 10 membros colaboraram em quatro frentes complementares:
+
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Autoria distribuída:} cada diagrama teve um \emph{owner} (individual ou dupla), que produziu a V1. A distribuição permitiu paralelismo sem sobreposição.
+  \item \textbf{Revisão aberta por toda a equipe:} cada diagrama recebeu múltiplos comentários individuais, arquivados como comprobatórios. Essa política gerou o ciclo V1$\to$V2 nos diagramas de Sequência, Comunicação e Máquina de Estados.
+  \item \textbf{Alinhamento de princípios via Perguntas:} as 15 perguntas de desenho de software de \textbf{§2.6 Perguntas de Modelagem} foram respondidas individualmente pelos 10 membros, preservando pontos de vista divergentes mesmo após o consenso de modelagem (formato idêntico ao da \emph{Design Sprint} da Entrega 01).
+  \item \textbf{Consolidação na wiki:} estruturação final dos artefatos numa GitPages navegável, com rastreabilidade a todos os \emph{focos} e elos com a Entrega 01.
+\end{enumerate}
+
+\section{Há algo a ser executado?}
+
+( ) SIM \hspace{1cm} (X) NÃO
+
+\vspace{0.3cm}
+
+Esta entrega é composta exclusivamente de \textbf{artefatos de modelagem e documentação}. Não há código a ser executado. Todo o conteúdo é consultável diretamente pela wiki navegável indicada na seção 2.
+
+\end{document}
